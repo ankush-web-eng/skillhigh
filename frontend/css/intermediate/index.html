@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #dot {
+      width: 25px;
+      height: 25px;
+      background-color: red;
+      border-radius: 50%;
+      position: fixed;
+      z-index: 1000;
+    }
+
+    .div1 {
+      width: 100px;
+      height: 100px;
+      background-color: gray;
+      position: static;
+      top: 50px;
+      left: 50px;
+    }
+
+    .div2 {
+      width: 100px;
+      height: 100px;
+      background-color: antiquewhite;
+      position: relative;
+      top: 50px;
+      left: 50px;
+    }
+
+    .main {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        position: relative;
+        top: 50px;
+        left: 50px;
+    }
+
+    .div3 {
+      width: 100px;
+      height: 100px;
+      background-color: greenyellow;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+
+    .div4 {
+      width: 100px;
+      height: 100px;
+      background-color: plum;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .test {
+        height: 200vh;
+        width: 200vh;
+        background-color: yellow;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+
+    .box {
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+        position: relative;
+        /* top: 100px;
+        left: 50%; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 2px solid black;
+
+        margin: 2px 1px 3px 6px;
+        padding: 20px;
+    }
+  </style>
+  <body>
+    <!-- <div id="dot"></div> -->
+    <!-- CSS Positioning -->
+    <!-- Static -->
+
+    <!-- <div class="div1"></div> -->
+
+    <!-- Relative -->
+
+    <!-- <div class="div2"></div> -->
+    <!-- Absolute -->
+
+    <!-- <div class="main">
+      <div class="div3"></div>
+    </div> -->
+    <!-- Fixed -->
+
+    <!-- <div class="div4"></div>
+
+    <div class="test"></div> -->
+
+    <!-- Box Model -->
+
+
+    <div class="box">Content</div>
+
+  </body>
+</html>
