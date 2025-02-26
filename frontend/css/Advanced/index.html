@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsiveness</title>
+</head>
+<style>
+    img {
+        height: 500px;
+    }
+
+    h1 {
+        display: block;
+    }
+
+    @media (max-width : 768px) {
+        img {
+            height: 100px;
+        }
+
+        h1 {
+            display: inline;
+        }
+    }
+
+    @media (min-width : 1024px) {
+        img {
+            height: 1000px;
+        }
+    }
+</style>
+<body>
+    <img src="https://ankushsingh.tech/Professional.jpg" alt="">
+
+    <h1>Ankush</h1>
+    <h1>Deshwal</h1>
+</body>
+</html>
