@@ -1,5 +1,4 @@
-// what is jsx 
-// difference between html and jsx
-// expressions in jsx
-// first hello world
-// component based architecture
+REACT ROUTER:
+        In React, when you build a web app, all the content is loaded in a single HTML page.
+        However, if you want to have different "pages" (like an About page, Home page, or Contact page),
+        you can use React Router to switch between views and show different components based on the URL.

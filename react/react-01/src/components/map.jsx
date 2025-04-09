@@ -7,26 +7,47 @@ const ListComponent = () => {
     { id: 3, name: 'Orange', isFavorite: false }
   ]);
 
-//   const toggleFavorite = (id) => {
-//     setItems((prevItems) =>
-//       prevItems.map((item) =>
-//         item.id === id ? { ...item, isFavorite: !item.isFavorite } : item
-//       )
-//     );
-//   };
+  //* map function -> array -> goes through each item of the array and then performs a function
+  //* filter function -> array -> goes through each item of the array and then performs a function and returns a new array based on the condition
 
-//   const favoriteItems = items.filter(item => item.isFavorite);
+  const toggleFavorite = (id) => {
+    setItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === id ? { ...item, isFavorite: !item.isFavorite } : item
+      )
+    );
+  };
+
+  const favoriteItems = items.filter(item => item.isFavorite);
 
   return (
     <div>
       <h3>All Items</h3>
       <ul>
-        
+        {items.map(function (i) {
+          return (
+            <li key={i.id}>
+              {i.name}
+              <button onClick={() => toggleFavorite(i.id)}>
+                {i.isFavorite ? 'Unfavorite' : 'Favorite'}
+              </button>
+            </li>
+          )
+        })}
       </ul>
 
       <h3>Favorite Items</h3>
       <ul>
-        
+        {favoriteItems.map(function (i) {
+          return (
+            <li key={i.id}>
+              {i.name}
+              <button onClick={() => toggleFavorite(i.id)}>
+                {i.isFavorite ? 'Unfavorite' : 'Favorite'}
+              </button>
+            </li>
+          )
+        })}
       </ul>
     </div>
   );
