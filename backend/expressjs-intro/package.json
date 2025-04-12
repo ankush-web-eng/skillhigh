@@ -1,0 +1,15 @@
+{
+  "name": "express-js-intro",
+  "version": "1.0.0",
+  "description": "this is a video explaining expressjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "author": "ankush",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "expressjs": "^1.0.1"
+  }
+}
