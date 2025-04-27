@@ -1,19 +1,26 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const authRouter = require("./routes/auth.route");
 const bodyParser = require('body-parser');
 
+const authRouter = require("./routes/auth.route");
+const productRouter = require("./routes/product.route");
+const cartRouter = require("./routes/cart.route");
+const orderRouter = require("./routes/order.route");
+
 const app = express();
-const MONGO_URI = ' mongodb://127.0.0.1:27017';
+const MONGO_URI = 'mongodb://127.0.0.1:27017';
 
 app.use(bodyParser.json());
 
 mongoose.connect(MONGO_URI)
-.then(() => console.log("connected to database..."))
-.catch(() => console.log("error connecting to database..."));
+    .then(() => console.log("connected to database..."))
+    .catch(() => console.log("error connecting to database..."));
+
+app.use('/api/auth', authRouter);
+app.use('/api/products', productRouter)
+app.use('/api/cart', cartRouter);
+app.use('/api/orders', orderRouter);
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
 });
-
-app.use('/api/auth', authRouter);
