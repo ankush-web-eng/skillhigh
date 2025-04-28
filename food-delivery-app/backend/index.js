@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const authRouter = require("./routes/auth.route");
 const productRouter = require("./routes/product.route");
@@ -11,6 +12,10 @@ const app = express();
 const MONGO_URI = 'mongodb://127.0.0.1:27017';
 
 app.use(bodyParser.json());
+app.use(cors({
+    origin : 'http://localhost:5173',
+    methods : ['GET', 'POST', 'PUT', 'DELETE'],
+}));
 
 mongoose.connect(MONGO_URI)
     .then(() => console.log("connected to database..."))

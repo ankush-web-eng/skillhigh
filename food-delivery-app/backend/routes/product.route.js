@@ -15,6 +15,8 @@ router.post('/add-product', authenticate, async (req, res) => {
             return res.status(403).json({ 'message': 'Forbidden' });
         }
 
+        console.log(req.body)
+
         const newProduct = new Product({
             name,
             description,
