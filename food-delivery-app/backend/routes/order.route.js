@@ -42,7 +42,7 @@ router.post('/place', authenticate, async (req, res) => {
 
 router.get('/my-orders', authenticate, async (req, res) => {
     try {
-        const products = await Order.find({ user: req.user._id });
+        const products = await Order.find({ user: req.user._id }).populate('items.product').sort({ createdAt: -1 });
 
         if (!products) {
             return res.status(404).json({ 'message': 'No Orders found' });

@@ -42,7 +42,9 @@ const ProductList = ({ products }) => {
                         <h2 className="text-xl font-bold">{product.name}</h2>
                         <p className="text-gray-600">{product.description}</p>
                         <p className="text-lg font-semibold">Rs. {product.price}</p>
-                        <button disabled={loading} onClick={() => handleToCart(product._id)} className="mt-4 bg-blue-500 text-white py-2 px-4 rounded cursor-pointer">Add to Cart</button>
+                        {
+                            window.location.pathname == '/' && <button disabled={loading} onClick={() => handleToCart(product._id)} className="mt-4 bg-blue-500 text-white py-2 px-4 rounded cursor-pointer">Add to Cart</button>
+                        }
                     </div>
                 </div>
             ))}

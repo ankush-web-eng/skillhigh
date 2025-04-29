@@ -15,13 +15,13 @@ const Navbar = () => {
         }
     }, []);
 
-    const handleLoginLogout = () => {
+    const handlesigninLogout = () => {
         if (isLoggedIn) {
             localStorage.removeItem("token");
             setIsLoggedIn(false);
-            navigate("/login");
+            navigate("/signin");
         } else {
-            navigate("/login");
+            navigate("/signin");
         }
     }
 
@@ -29,7 +29,7 @@ const Navbar = () => {
         if (isLoggedIn) {
             navigate(path);
         } else {
-            navigate("/login");
+            navigate("/signin");
         }
     }
 
@@ -55,10 +55,16 @@ const Navbar = () => {
                     Orders
                 </button>
                 <button
-                    onClick={handleLoginLogout}
+                    onClick={handlesigninLogout}
                     className="bg-white text-orange-500 px-4 py-2 rounded hover:bg-gray-200 transition duration-300 ease-in-out cursor-pointer"
                 >
-                    {isLoggedIn ? 'Logout' : 'Login'}
+                    {isLoggedIn ? 'Logout' : 'signin'}
+                </button>
+                <button
+                    onClick={() => handleProtectedRoute("/admin")}
+                    className="bg-white text-orange-500 px-4 py-2 rounded hover:bg-gray-200 transition duration-300 ease-in-out cursor-pointer"
+                >
+                    A
                 </button>
             </div>
         </nav>

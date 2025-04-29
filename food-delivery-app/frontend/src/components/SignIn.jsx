@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
 
@@ -63,6 +64,9 @@ const SignIn = () => {
                     disabled={loading}
                     onClick={handleSignUp}
                 >Signin</button>
+                <Link
+                className="text-blue-500 hover:text-blue-800 text-sm mt-4 block text-center"
+                to="/signup">Register</Link>
             </form>
         </div>
     )

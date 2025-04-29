@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
 
@@ -84,6 +85,9 @@ const SignUp = () => {
                     disabled={loading}
                     onClick={handleSignUp}
                 >Signup</button>
+                <Link
+                    className="text-blue-500 hover:text-blue-800 text-sm mt-4 block text-center"
+                    to="/signin">Signin</Link>
             </form>
         </div>
     )
